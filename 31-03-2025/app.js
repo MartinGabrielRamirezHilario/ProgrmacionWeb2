@@ -29,7 +29,7 @@ function iniciarPrograma(){
                 continuar=false;
                 break;
             default:
-                alert("Opcion no valida. INtente de nuevo");
+                alert("Opcion no valida. Intente de nuevo");
         }
     }
 }
@@ -66,11 +66,27 @@ function agregarProducto(){
         inventario.push(producto);
         alert("Prooducto agregado");
     }else{
-        alert("Cntidad y Precio tiene que ser positivos");
+        alert("Cantidad y Precio tiene que ser positivos");
     }
 }
 function buscarProductos(){
-    print("En proceso")
+    let nombreABuscar=prompt("Ingrese el nombre del producto que quiere buscar:").toLowerCase();
+    let encontrado=false;
+    let mensaje="\nProductos relacionados\n";
+    for (let p=0;p<inventario.length;p++){
+        if (inventario[p].nombre.toLowerCase()===nombreABuscar){
+            mensaje += `Producto:  ${p+1}\n`+
+            `Nombre: ${inventario[p].nombre}\n`+
+            `Precio: ${inventario[p].precio}`;
+            encontrado=true;
+        }
+    }
+    if(encontrado==true){
+        alert("\nSe encontraron los productos exitosamente"+mensaje);
+    }else{
+        alert("\nProductos no encontrados, intentelo con otro cosa");
+    }
+
 }
 
 iniciarPrograma();

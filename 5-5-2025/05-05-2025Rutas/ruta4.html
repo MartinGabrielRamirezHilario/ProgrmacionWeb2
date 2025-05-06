@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta 4</title>
+</head>
+<body>
+    <style>
+        .main-container{
+            display: flex;
+            grid-template-columns: 1fr;
+            background-color: green;
+            box-sizing: border-box;
+            width: 25%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 43px 60px;
+        }
+        .Formulario{
+            display: grid;
+            box-sizing: border-box;
+            border-color: solid black;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            justify-content: center;
+            margin: 0.5rem;
+            padding: 0.3rem;
+            gap: 3rem;
+        }
+        .Formulario input{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+        <main class="main-container">
+            <form class="Formulario" action="">
+                <div>
+                    <label for="User">Usuario</label>
+                    <input type="text" name="User" id="user">
+                </div>
+                <br><br>
+                <div>
+                    <label for="Pass">Contraseña:</label>
+                    <input type="password" name="contraseña" id="contraseña" required maxlength="20">
+                </div>
+            </form>
+        </main>
+</body>
+</html>

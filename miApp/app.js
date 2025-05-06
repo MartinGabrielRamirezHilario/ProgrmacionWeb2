@@ -1,16 +1,18 @@
-const express=require('express');
-const path=require('path');
-const routes=require('./routes/routes');
+const express = require('express');
+const path    = require('path');
+const routes  = require('./routes/routes');
 
-const app=express();
-const port=3005;
+const app  = express();
+const port = 3005;
 
-//midleware para el css y img archivos estaticos
-app.use(express.static(path.join(__dirname,"public")));
+// 1. Archivos estáticos (CSS, imágenes, JS cliente, ...)
+app.use(express.static(path.join(__dirname, 'public')));
 
-//usar las rutas desde el archivo de rutas
+// 2. Monta tus rutas
+app.use('/', routes);
 
-app.listen("/",routes);
-app.listen(port,()=>{
-    console.log(`http://127.0.0.1${port}`);
+// 3. Arranca el servidor
+app.listen(port, () => {
+  console.log(`Servidor escuchando en http://127.0.0.1:${port}`);
 });
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesQr.css">
+    <title>Formulario para Mensaje</title>
+</head>
+<body>
+    <header>
+        <h1>Enviando un mensaje con la API de WhattsApp</h1>
+    </header>
+    <main>
+        <section>
+            <form onsubmit="generarQr(event)">
+                <article>
+                    <label for="numeroDestino">Ingresa el numero del destinatario</label>
+                    <input type="number" name="numeroDestino" id="numeroIngresado" required maxlength="10" placeholder="Ingresa un numero telfonico:">
+                </article>
+                <article>
+                    <label for="mensajeUsuario">Ingresa el mensaje que deseas enviar</label>
+                    <input type="text" name="mensajeUsuario" id="mensajeIngresado" required maxlength="300" placeholder="Ingresa tu mensaje:">
+                </article>
+                <div>
+                    <button onclick="generarQr()">Generar QR</button>
+                    <button onclick="location.href='mensajeWhatts.html'">Generar nuevo QR</button>
+                </div>
+            </section>
+            </form>   
+        <div class="imgQR" id="qr-code">
+            <!-- aqui va el qr -->
+        </div>
+    </main>
+    <a href="/"><p>Inicio</p></a>
+    <footer></footer>
+</body>
+    <script src="/logicaMensaje.js"></script>
+</html>

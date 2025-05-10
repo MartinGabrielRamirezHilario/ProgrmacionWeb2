@@ -8,7 +8,16 @@ router.get("/",(req,res)=>{
 });
 //ruta Registro
 router.get("/registro",(req,res)=>{//Aqui es como se va a visualizar en el link
-    res.sendFile(path.join(__dirname,"../views/registro.html"))
-})
+    res.sendFile(path.join(__dirname,"../views/registro.html"));
+});
+
+//Ruta Calculadora
+router.get("/calculadora",(req,res)=>{
+    res.sendFile(path.join(__dirname,"../views/calculadora.html"));
+});
+//Ruta QR
+router.get("/Qr",(req,res)=>{
+    res.sendFile(path.join(__dirname,"../views/mensajeWhatts.html"));
+});
 
 module.exports=router;

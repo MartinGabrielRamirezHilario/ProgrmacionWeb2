@@ -6,8 +6,10 @@ const port=3089;
 
 //middleware para servir los archivos estaticos(css,img,pdf,etc)
 app.use(express.static(path.join(__dirname,"public")));
+app.use(express.static(path.join(__dirname,"logica")))
 
 app.use("/",routes);
 app.listen(port,(req,res)=>{
     console.log(`http://localhost:${port}`);
 })
+

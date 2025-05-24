@@ -101,3 +101,17 @@ app.post('/update/:id',(req,res) =>{
         }
     });
 });
+//eliminar
+app.get('/delete/id'),(req,res)=>{
+    const {id}=req.params;
+    const eliminarUsuarioId='DELETE FROM users WHERE id= ?';
+    db.query(eliminarUsuarioId,[id],(err)=>{
+        if(err){
+            console.error('Error al eliminar en la DB',err);
+            res.send("Error en el DB");
+
+        }else{
+            res.redirect('/');
+        }
+    });
+};

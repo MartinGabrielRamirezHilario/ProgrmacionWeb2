@@ -1,0 +1,86 @@
+html{
+ font-family: "Lexend", sans-serif;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    gap:10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0.8px;
+}
+.main-container section:first-child h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+/*Diseño tabla*/
+.main-container section:first-child table{
+    border: 1px solid black;
+    display: table;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+.main-container section:first-child table thead tr, 
+.main-container section:first-child table tbody td{
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+.main-container section:first-child table td a{
+    text-decoration: none;
+    color: royalblue;
+}
+/*Registrar nuevo usuario*/
+.main-container section:nth-child(2){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+.main-container section:nth-child(2) input,
+.main-container section:nth-child(2) button{
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 1.3rem;
+    padding: 15px;
+    cursor: pointer;
+}
+.main-container section:nth-child(2) button:hover{
+    background-color: rgb(51, 102, 204);
+    transition: all 0.4s linear;
+}
+/*Pagina Editar*/
+.main-container2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.main-container2 input,
+.main-container2 button{
+    display: block;
+    width: 30%;
+    margin: 10px auto;
+    font-size: 1.3rem;
+    padding: 15px;
+    cursor: pointer;
+}
+.main-container2 button:hover{
+    background-color: rgb(51, 102, 204);
+    transition: all 0.4s linear;
+}
